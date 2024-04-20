@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: Nunito, sans-serif;
 }
 
 /* Video Background */
@@ -83,7 +83,9 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  /* fonts need to be adjusted for inputs as well
+  ("body" does not apply "input" styles): */
+  font-family: Nunito, sans-serif;
 }
 
 /* Button */
@@ -100,7 +102,9 @@ button {
   outline: none;
 }
 
-
+button:hover {
+  filter: brightness(110%);
+}
 
 /* Countdown */
 ul {
