@@ -146,6 +146,7 @@ li span {
 
   50% {
     color: rgb(220, 202, 99);
+    transform: scale(1.5);
   }
 
   75% {
