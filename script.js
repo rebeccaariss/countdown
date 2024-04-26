@@ -31,6 +31,19 @@ function updateDOM() {
   const minutes = Math.floor((distance % hour) / minute);
   const seconds = Math.floor((distance % minute) / second);
   console.log(days, hours, minutes, seconds);
+
+  // Populate countdown:
+  countdownElTitle.textContent = `${countdownTitle}`;
+  timeElements[0].textContent = `${days}`;
+  timeElements[1].textContent = `${hours}`;
+  timeElements[2].textContent = `${minutes}`;
+  timeElements[3].textContent = `${seconds}`;
+
+  // Hide input fields/container:
+  inputContainer.hidden = true;
+
+  // Show countdown:
+  countdownEl.hidden = false;
 };
 
 // Take values from form input:
