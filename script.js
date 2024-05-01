@@ -37,7 +37,6 @@ function updateDOM() {
     const hours = Math.floor((distance % day) / hour);
     const minutes = Math.floor((distance % hour) / minute);
     const seconds = Math.floor((distance % minute) / second);
-    console.log(days, hours, minutes, seconds);
 
     // Hide input:
     inputContainer.hidden = true;
@@ -98,6 +97,7 @@ function reset() {
   // Reset values:
   countdownTitle = '';
   countdownDate = '';
+  localStorage.removeItem('countdown');
 };
 
 function restorePreviousCountdown() {
