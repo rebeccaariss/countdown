@@ -15,6 +15,7 @@ let countdownTitle = '';
 let countdownDate = '';
 let countdownValue = Date;
 let countdownActive;
+let savedCountdown;
 
 const second = 1000;
 const minute = second * 60;
@@ -66,6 +67,14 @@ function updateCountdown(e) {
   e.preventDefault(); // avoids network request/page refresh on submit
   countdownTitle = e.srcElement[0].value;
   countdownDate = e.srcElement[1].value;
+  savedCountdown = { // set global variable
+    title: countdownTitle,
+    date: countdownDate,
+  };
+
+  // Store data to localStorage in JSON string format (can only save strings to
+  // web servers; localStorage behaves like a server here):
+  localStorage.setItem('countdown', JSON.stringify(savedCountdown));
 
   // Check for valid date:
   if (countdownDate === '') {
